@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 /*
  * Author: Andrade, Maya
@@ -10,15 +13,32 @@ using UnityEngine;
  */
 public class ScreenManager : MonoBehaviour
 {
+    [Header("Health Bar Variables")]
+    public Slider slider;
+    public Gradient gradient;
+    public Image fill;
+    public TMP_Text healthPoints_Text;
+    public PlayerController playerScript;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        SetBarMax();
     }
 
     // Update is called once per frame
     void Update()
     {
+        SetBarPos();
+    }
+
+    private void SetBarMax()
+    {
         
+    }
+
+    private void SetBarPos()
+    {
+
     }
 }
