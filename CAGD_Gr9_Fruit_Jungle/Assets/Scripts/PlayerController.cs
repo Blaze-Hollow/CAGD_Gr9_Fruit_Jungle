@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Combat Variables")]
     public int attackStrength = 10;
+    public int fruitScore = 0;
 
 
     // Start is called before the first frame update

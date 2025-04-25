@@ -20,6 +20,7 @@ public class UI_Manager : MonoBehaviour
     public PlayerController playerScript;
 
     [Header("Fruit Score")]
+    public TMP_Text fruitScore_Text;
 
     // Start is called before the first frame update
     void Start()
