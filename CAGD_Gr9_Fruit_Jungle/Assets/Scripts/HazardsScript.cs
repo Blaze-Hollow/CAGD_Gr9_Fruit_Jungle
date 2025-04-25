@@ -9,6 +9,7 @@ using UnityEngine;
 public class HazardsScript : MonoBehaviour
 {
     public int DamageDealt;
+    public GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,13 @@ public class HazardsScript : MonoBehaviour
         else
         {
             Destroy(other.gameObject);
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject == Player )
+        {
+            
         }
     }
 
