@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 /*
  * Author: Andrade, Maya
@@ -19,6 +18,8 @@ public class UI_Manager : MonoBehaviour
     public Image fill;
     public TMP_Text healthPoints_Text;
     public PlayerController playerScript;
+
+    [Header("Fruit Score")]
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +38,10 @@ public class UI_Manager : MonoBehaviour
     /// </summary>
     private void SetBarMax()
     {
-
+        slider.maxValue = playerScript.maxHealthPoints; //sets slider's maximum value
+        slider.value = playerScript.maxHealthPoints; //sets the slider's value at full HP at start
+        fill.color = gradient.Evaluate(1f); //sets the color to green
+        healthPoints_Text.text = playerScript.healthPoints + ""; //sets the HP text on the side to the player's HP value at start
     }
 
     /// <summary>
@@ -45,7 +49,9 @@ public class UI_Manager : MonoBehaviour
     /// </summary>
     private void SetBarPos()
     {
-
+        slider.value = playerScript.healthPoints; //keeps the slider's vaue synced with player's HP value
+        fill.color = gradient.Evaluate(slider.normalizedValue); //changes the color of the health bar fill as it lowers
+        healthPoints_Text.text = playerScript.healthPoints + ""; //keeps the HP number displayed synced with the player's HP value
     }
 
 }
