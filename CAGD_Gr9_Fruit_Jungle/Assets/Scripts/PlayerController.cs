@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     [Header("Movement Variables")]
     public int speed = 10;
     public int jumpForce = 7;
-    public bool isFacingLeft;
 
     private Rigidbody rb;
 
@@ -72,7 +71,6 @@ public class PlayerController : MonoBehaviour
         {
             transform.position += Vector3.left * speed * Time.deltaTime;
             transform.localScale = new Vector3(-1, 1, 1);
-            isFacingLeft = true;
         }
 
         //to move right
@@ -80,7 +78,6 @@ public class PlayerController : MonoBehaviour
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
             transform.localScale = new Vector3(1, 1, 1);
-            isFacingLeft = false;
         }
     }
 
