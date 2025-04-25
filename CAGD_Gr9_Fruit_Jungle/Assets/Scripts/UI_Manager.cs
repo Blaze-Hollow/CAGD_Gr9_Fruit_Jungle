@@ -32,6 +32,7 @@ public class UI_Manager : MonoBehaviour
     void Update()
     {
         SetBarPos();
+        fruitScore_Text.text = playerScript.fruitScore + "";
     }
 
     /// <summary>
