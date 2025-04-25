@@ -1,9 +1,14 @@
+/* Author [Diaz,Samuel]
+ * Last Updated [04/24/2025]
+ * Description [This script is in charge of giving the player health back once they enter in contact with the health pack]
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class StrenghtPowerUp : MonoBehaviour
 {
+    public int strenghtBoost = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +19,12 @@ public class StrenghtPowerUp : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<PlayerController>())
+        {
+            other.GetComponent<PlayerController>().attackStrength += strenghtBoost;
+        }
     }
 }
