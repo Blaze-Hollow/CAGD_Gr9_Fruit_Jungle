@@ -15,6 +15,7 @@ public class DurianEnemy : MonoBehaviour
     public int speed = 10;
     public int health = 10;
     private bool hasExploded = false;
+    public GameObject DurianSplatter;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,7 @@ public class DurianEnemy : MonoBehaviour
     {
         if (health == 0 && !hasExploded)
         {
-            Instantiate(DurianSplatter, transform.position);
+            Instantiate(DurianSplatter, transform.position, transform.rotation);
         }
     }
 }
