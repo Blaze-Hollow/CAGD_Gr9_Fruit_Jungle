@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         healthPoints = maxHealthPoints;
-        rb = GetComponent<Rigidbody>(); 
+        rb = GetComponent<Rigidbody>();
     }
 
     private void FixedUpdate()
@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
 
         if (!ScreenManager.gameIsPaused)
         {
@@ -96,12 +96,12 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) 
+        if (Input.GetKeyDown(KeyCode.Space) && OnGround())
         {
             Debug.Log("Jump Attempted!");
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
-        
+
     }
 
 
@@ -109,10 +109,11 @@ public class PlayerController : MonoBehaviour
     {
         bool onGround = false;
 
-        RaycastHit hit;
+       
+        Rigidbody rb = GetComponent<Rigidbody>();
 
-        //Draws a ray downward 1.2 units from the player's center
-        if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out hit, 1f + 0.2f))
+        // Check if the player's velocity along the Y-axis is approximately zero
+        if (Mathf.Abs(rb.velocity.y) < 0.1f)
         {
             onGround = true;
         }
@@ -120,11 +121,14 @@ public class PlayerController : MonoBehaviour
         return onGround;
     }
 
+
+
     public void Bounce()
     {
         rb.velocity = new Vector3(rb.velocity.x, jumpForce * 0.666f, rb.velocity.z);
     }
 
-
-
 }
+
+
+
