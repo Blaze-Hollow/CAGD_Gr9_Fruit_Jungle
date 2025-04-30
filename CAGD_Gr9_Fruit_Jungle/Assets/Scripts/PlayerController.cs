@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     [Header("Combat Variables")]
     public int attackStrength = 10;
     public int fruitScore = 0;
+    public float killHeight = -10;
 
 
     // Start is called before the first frame update
@@ -39,14 +40,18 @@ public class PlayerController : MonoBehaviour
         {
             Move();
         }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.y < killHeight)
+        {
+            SceneManager.LoadScene(4);
+        }
 
-
-        if (!ScreenManager.gameIsPaused)
+            if (!ScreenManager.gameIsPaused)
         {
 
             //TEMPORARY- REMOVE BEFORE SUMBITTING
