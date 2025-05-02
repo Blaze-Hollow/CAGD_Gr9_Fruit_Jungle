@@ -1,14 +1,14 @@
 /* Author [Diaz,Samuel]
  * Last Updated [04/29/2025]
- * Description [This script is in charge of the behaviour of the Coconut Enemy]
+ * Description [This script is in charge finishing the game once the player aachieves the apple]
  */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class CoconutEnemy : MonoBehaviour
+public class GoldenAppleScript : MonoBehaviour
 {
-    public int Health = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +20,13 @@ public class CoconutEnemy : MonoBehaviour
     {
         
     }
-    public void elimination()
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (Health <= 0)
+        if(other.GetComponent<PlayerController>())
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene(5);
         }
+        //aaaaa
     }
 }
