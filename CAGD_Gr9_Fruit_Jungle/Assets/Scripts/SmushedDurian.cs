@@ -23,7 +23,7 @@ public class SmushedDurian : MonoBehaviour
     }
 
     //checks if the player collided, and damages 8hp every second the player is on it
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay (Collider other)
     {
         if (other.GetComponent<PlayerController>() && canDamage)
         {

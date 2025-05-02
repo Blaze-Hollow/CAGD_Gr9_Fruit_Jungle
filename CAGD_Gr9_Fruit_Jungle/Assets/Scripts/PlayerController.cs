@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 /*
  * Name: Omar Samu and Maya Andrade
  * Date: 04/06/25
- * Last Updated: 04/20/25
+ * Last Updated: 05/01/25
  * Description: Allows player movement
  */
 public class PlayerController : MonoBehaviour
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!ScreenManager.gameIsPaused)
+        if (!PauseMenu.gameIsPaused)
         {
             Move();
         }
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(4);
         }
 
-            if (!ScreenManager.gameIsPaused)
+            if (!PauseMenu.gameIsPaused)
         {
 
             //TEMPORARY- REMOVE BEFORE SUMBITTING
