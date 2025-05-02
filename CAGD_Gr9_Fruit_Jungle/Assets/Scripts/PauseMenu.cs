@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /*
  * Author: Andrade, Maya
@@ -55,4 +56,21 @@ public class PauseMenu : MonoBehaviour
         gameIsPaused = true;
     }
 
+    /// <summary>
+    /// When a button with this function is pressed it will take the player to the main menu scene
+    /// </summary>
+    public void MainMenuButtonPressed()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
+    }
+
+    /// <summary>
+    /// When a button with this function is pressed it will close out the application (or print that the player has quit in console if not a build)
+    /// </summary>
+    public void QuitButtonPressed()
+    {
+        print("Player has quit the game");
+        Application.Quit();
+    }
 }
