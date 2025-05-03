@@ -35,7 +35,7 @@ public class ScreenManager : MonoBehaviour
     }
 
     /// <summary>
-    /// When a button with this function is pressed it will take the player to the level scene
+    /// When a button with this function is pressed it will take the player to the first level scene
     /// </summary>
     public void PlayButtonPressed()
     {

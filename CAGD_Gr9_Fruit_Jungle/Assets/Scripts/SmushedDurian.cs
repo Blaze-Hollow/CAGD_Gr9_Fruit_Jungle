@@ -33,7 +33,6 @@ public class SmushedDurian : MonoBehaviour
         }
     }
 
-    
     /// <summary>
     /// Ensures that the DurianSplatter doesn't do more than x hp of damage every second
     /// </summary>
