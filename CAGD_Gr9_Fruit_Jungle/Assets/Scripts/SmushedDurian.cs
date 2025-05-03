@@ -27,14 +27,15 @@ public class SmushedDurian : MonoBehaviour
     {
         if (other.GetComponent<PlayerController>() && canDamage)
         {
-            other.GetComponent<PlayerController>().healthPoints -= 8;
+            other.GetComponent<PlayerController>().healthPoints -= 10;
             canDamage = false;
             StartCoroutine(DamageCooldown());
         }
     }
+
     
     /// <summary>
-    /// Ensures that the DurianSplatter doesn't do more than 8hp of damage every second
+    /// Ensures that the DurianSplatter doesn't do more than x hp of damage every second
     /// </summary>
     IEnumerator DamageCooldown()
     {

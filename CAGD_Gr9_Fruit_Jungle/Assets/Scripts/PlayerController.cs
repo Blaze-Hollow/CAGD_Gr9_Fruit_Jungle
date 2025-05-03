@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
 
             if (healthPoints <= 0) //checks to see if player has "died" yet or not
             {
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene(4);
                 print("GAME OVER =[");
             }
 
