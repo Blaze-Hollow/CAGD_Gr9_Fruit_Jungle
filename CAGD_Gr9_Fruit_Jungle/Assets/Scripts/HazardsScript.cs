@@ -23,21 +23,19 @@ public class HazardsScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        print(other);
         if (other.GetComponent<PlayerController>())
         {
-            other.GetComponent<PlayerController>().healthPoints -=DamageDealt;
+            other.GetComponent<PlayerController>().healthPoints = other.GetComponent<PlayerController>().healthPoints - DamageDealt;
         }
-        else
-        {
-            Destroy(other.gameObject);
-        }
+       
     }
     private void OnCollisionEnter(Collision collision)
     {
-        //if(collision.)
+        if (collision.gameObject.GetComponent<PlayerController>())
         {
-            
+            collision.gameObject.GetComponent<PlayerController>();
         }
     }
-
+    //
 }

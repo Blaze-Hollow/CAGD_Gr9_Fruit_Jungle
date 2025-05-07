@@ -27,4 +27,12 @@ public class CoconutEnemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+       // if (other.tag("Player"))
+        {
+
+        }
+    }
 }
