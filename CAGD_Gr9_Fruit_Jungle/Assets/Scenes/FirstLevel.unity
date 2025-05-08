@@ -309,25 +309,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8cde78333660484ebd5a6fb57ef1d47, type: 3}
---- !u!1 &641558563 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 758136520723681939, guid: 396988428b6baeb4586867eff3d36538, type: 3}
-  m_PrefabInstance: {fileID: 8664789190789271828}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &641558568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641558563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04334a186eba739438fe95c77f760d43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DamageDealt: 100
-  Player: {fileID: 0}
 --- !u!4 &641558572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2042685019679627933, guid: 396988428b6baeb4586867eff3d36538, type: 3}
@@ -1168,14 +1149,6 @@ PrefabInstance:
       value: Water
       objectReference: {fileID: 0}
     - target: {fileID: 2042685019679627933, guid: 396988428b6baeb4586867eff3d36538, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.1464002
-      objectReference: {fileID: 0}
-    - target: {fileID: 2042685019679627933, guid: 396988428b6baeb4586867eff3d36538, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.7608578
-      objectReference: {fileID: 0}
-    - target: {fileID: 2042685019679627933, guid: 396988428b6baeb4586867eff3d36538, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.914085
       objectReference: {fileID: 0}
@@ -1218,10 +1191,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 758136520723681939, guid: 396988428b6baeb4586867eff3d36538, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 641558568}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 396988428b6baeb4586867eff3d36538, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
