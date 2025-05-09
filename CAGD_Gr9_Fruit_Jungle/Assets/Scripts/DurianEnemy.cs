@@ -6,7 +6,7 @@ using UnityEngine;
 /*
  * Author: Andrade, Maya
  * Created: 04/29/2025
- * Last Updated: 04/30/2025
+ * Last Updated: 05/08/2025
  * Description: This will handle the durian enemy movement and attack
  */
 
@@ -15,12 +15,12 @@ public class DurianEnemy : MonoBehaviour
     [Header("Movement Variables")]
     public int speedDown = 10;
     public int speedUp = 7;
-    public float midPoint_Y = 5; //middle point from top to bottom of model (for dropping down to floor)
-    public float midPoint_X = 1; //middle point from right to left of model (for detecting the player from front and back)
+    public float midPoint_Y = 2; //middle point from top to bottom of model (for dropping down to floor)
     public Vector3 startingPoint;
     public Vector3 movePoint;
-    private bool movingDown;
-    private bool movingUp;
+    public bool movingDown;
+    public bool movingUp;
+    public bool atTop;
 
     [Header("Health Variables")]
     public int health = 10;
@@ -30,37 +30,22 @@ public class DurianEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startingPoint = transform.position;
-        movePoint = FindMovingPoint(); //in the start makes Durian go only up and down, if we want it to move, have to edit
+        startingPoint.y = transform.position.y;
+        atTop = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (health == 0 && !hasExploded)
+        if (health == 0)
         {
+            if (!hasExploded)
+            {
             Instantiate(DurianSplatter, transform.position, transform.rotation);
-        }
-
-        RaycastHit hit;
-        Vector3 frontEdge = transform.position + new Vector3(-midPoint_X, 0, 0);
-        Vector3 backEdge = transform.position + new Vector3(midPoint_X, 0, 0);
-        Debug.DrawRay(frontEdge, Vector3.down * 20, Color.red);
-        Debug.DrawRay(backEdge, Vector3.down * 20, Color.red);
-
-        if (Physics.Raycast(frontEdge, Vector3.down, out hit, Mathf.Infinity) && !movingUp && !movingDown)
-        {
-            if (hit.transform.GetComponent<PlayerController>())
-            {
-                movingDown = true;
+            hasExploded = true;
             }
-        }
-        if (Physics.Raycast(backEdge, Vector3.down, out hit, Mathf.Infinity) && !movingUp && !movingDown)
-        {
-            if (hit.transform.GetComponent<PlayerController>())
-            {
-                movingDown = true;
-            }
+
+            Destroy(gameObject);
         }
 
         if (movingDown)
@@ -84,11 +69,12 @@ public class DurianEnemy : MonoBehaviour
 
         RaycastHit hit;
         Debug.DrawRay(transform.position, Vector3.down * 20, Color.red);
+
         if (Physics.Raycast(transform.position, Vector3.down, out hit, Mathf.Infinity))
         {
             pointToMoveTo = hit.point + new Vector3(0, midPoint_Y, 0);
         }
-        else //if no ground is below the thwomp
+        else //if no ground is below
         {
             pointToMoveTo = transform.position - new Vector3(0, 20, 0);
         }
@@ -100,6 +86,8 @@ public class DurianEnemy : MonoBehaviour
     /// </summary>
     private void MoveDown()
     {
+        atTop = false;
+
         transform.position += Vector3.down * speedDown * Time.deltaTime;
 
         if (transform.position.y <= movePoint.y)
@@ -115,10 +103,13 @@ public class DurianEnemy : MonoBehaviour
     /// </summary>
     private void MoveUp()
     {
+        atTop = false;
+
         transform.position += Vector3.up * speedUp * Time.deltaTime;
 
         if (transform.position.y >= startingPoint.y)
         {
+            atTop = true;
             movingUp = false;
         }
     }
@@ -128,7 +119,13 @@ public class DurianEnemy : MonoBehaviour
     /// </summary>
     IEnumerator DirectionChanger()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         movingUp = true;
+    }
+
+    public void PlayerDetected()
+    {
+        movePoint = FindMovingPoint();
+        movingDown = true;
     }
 }
