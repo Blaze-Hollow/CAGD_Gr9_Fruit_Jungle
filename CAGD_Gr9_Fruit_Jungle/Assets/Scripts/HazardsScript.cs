@@ -32,10 +32,7 @@ public class HazardsScript : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<PlayerController>())
-        {
-            collision.gameObject.GetComponent<PlayerController>();
-        }
+       
     }
     //
 }
