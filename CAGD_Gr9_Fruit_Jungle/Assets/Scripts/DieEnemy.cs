@@ -26,6 +26,7 @@ public class DieEnemy : MonoBehaviour, IDamageable
     {
         if (canBeAttacked)
         {
+            
             Die();
         }
 

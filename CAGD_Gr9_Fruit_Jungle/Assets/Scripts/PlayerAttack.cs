@@ -34,7 +34,13 @@ public class PlayerAttack : MonoBehaviour
         }
 
         // Manage cooldown timer behavior
-        
+        if (cooldownTimer > 0)
+        {
+            cooldownTimer -= Time.deltaTime;
+        }
+
+        // Manage cooldown timer behavior
+
 
         // Start an attack if permitted
         if (Input.GetKeyDown(KeyCode.E) && cooldownTimer <= 0 && !attacking)
