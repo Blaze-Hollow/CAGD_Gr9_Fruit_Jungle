@@ -344,7 +344,7 @@ MonoBehaviour:
   plr: {fileID: 300403008}
   rb: {fileID: 300403006}
   foot: {fileID: 0}
-  attackLength: 3
+  attackLength: 1
   cooldownLength: 1.5
   enemyMask:
     serializedVersion: 2
@@ -400,7 +400,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeAttacked: 1
   maxEnemyHealthPoints: 100
-  enemyHealthPoints: 0
 --- !u!65 &452026300
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -600,7 +599,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeAttacked: 1
   maxEnemyHealthPoints: 100
-  enemyHealthPoints: 0
 --- !u!1 &2123106040
 GameObject:
   m_ObjectHideFlags: 0

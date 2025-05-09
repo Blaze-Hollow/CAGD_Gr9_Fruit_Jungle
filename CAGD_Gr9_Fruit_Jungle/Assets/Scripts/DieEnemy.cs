@@ -8,7 +8,7 @@ public class DieEnemy : MonoBehaviour, IDamageable
 
     [Header("Enemy Health Variables")]
     public int maxEnemyHealthPoints = 100;
-    public int enemyHealthPoints;
+   
 
 
 
@@ -26,20 +26,27 @@ public class DieEnemy : MonoBehaviour, IDamageable
     {
         if (canBeAttacked)
         {
-            
-            Die();
+
+            if (maxEnemyHealthPoints > 0)
+            {
+                maxEnemyHealthPoints -= 50;
+            }
+            else if (maxEnemyHealthPoints <= 0)
+            {
+                Die();
+            }
+
         }
 
+        void Die()
+        {
+            Destroy(gameObject);
+        }
+
+
+
+
+
+
     }
-
-    void Die()
-    {
-        Destroy(gameObject);
-    }
-
-
-
-
-
-
 }

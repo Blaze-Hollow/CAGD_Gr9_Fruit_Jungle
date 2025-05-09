@@ -18,7 +18,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] LayerMask enemyMask;
 
     [SerializeField] Renderer playerRenderer;
-    
+
 
 
     void Update()
@@ -43,20 +43,20 @@ public class PlayerAttack : MonoBehaviour
 
 
         // Start an attack if permitted
-        if (Input.GetKeyDown(KeyCode.E) && cooldownTimer <= 0 && !attacking)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && cooldownTimer <= 0 && !attacking)
         {
             StartAttack();
         }
 
-     
+
     }
 
-    
+
 
     void StartAttack()
     {
         attackTimer = attackLength;
-        
+
     }
 
     void EndAttack()
@@ -85,4 +85,16 @@ public class PlayerAttack : MonoBehaviour
             }
         }
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.TryGetComponent(out IDamageable damagable))
+        {
+            if (attacking)
+            {
+                damagable.OnAttack(plr);
+            }
+        }
+    }
+
 }
