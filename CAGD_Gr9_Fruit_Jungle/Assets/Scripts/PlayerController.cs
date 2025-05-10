@@ -11,6 +11,9 @@ using UnityEngine.SceneManagement;
  */
 public class PlayerController : MonoBehaviour
 {
+
+    Animation anim; 
+
     [Header("Movement Variables")]
     public int speed = 10;
     public int jumpForce = 7;
@@ -32,6 +35,9 @@ public class PlayerController : MonoBehaviour
     {
         healthPoints = maxHealthPoints;
         rb = GetComponent<Rigidbody>();
+
+        anim = GetComponent<Animation>();
+        anim.Play("Idle");
     }
 
     private void FixedUpdate()
@@ -51,7 +57,7 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(4);
         }
 
-            if (!PauseMenu.gameIsPaused)
+        if (!PauseMenu.gameIsPaused)
         {
 
             //TEMPORARY- REMOVE BEFORE SUMBITTING
@@ -68,8 +74,14 @@ public class PlayerController : MonoBehaviour
             }
 
             Jump();
-            Move();
+            Move(); 
 
+            if (anim.isPlaying == false)
+            {
+                anim.Play("Idle");
+            }
+
+           
 
         }
     }
@@ -78,35 +90,61 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
+            anim.Play("Jog");
             //Move right
             rb.MovePosition(transform.position += (Vector3.right * speed * Time.deltaTime));
+        }
+        if (Input.GetKeyUp(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            anim.Play("Idle");
+
         }
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
+            anim.Play("Jog");
             //Move right
             transform.position += Vector3.left * speed * Time.deltaTime;
         }
+        if (Input.GetKeyUp(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            anim.Play("Idle");
+
+        }
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
+            anim.Play("Jog");
             //Move right
             transform.position += Vector3.back * speed * Time.deltaTime;
         }
+        if (Input.GetKeyUp(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        {
+            anim.Play("Idle");
+
+        }
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
+            anim.Play("Jog");
             //Move right
             transform.position += Vector3.forward * speed * Time.deltaTime;
         }
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        {
+            anim.Play("Idle");
+
+        }
+
+        
     }
 
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && OnGround())
+        if (Input.GetKeyUp(KeyCode.Space) && OnGround())
         {
-            Debug.Log("Jump Attempted!");
+            anim.Play("Jump");
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
-
+       
     }
 
 
