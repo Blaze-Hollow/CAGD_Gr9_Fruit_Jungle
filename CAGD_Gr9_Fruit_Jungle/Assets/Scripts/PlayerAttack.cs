@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    Animation anim;
+
     [SerializeField] PlayerController plr;
     [SerializeField] Rigidbody rb;
     [SerializeField] Transform foot;
@@ -19,7 +21,10 @@ public class PlayerAttack : MonoBehaviour
 
     [SerializeField] Renderer playerRenderer;
 
-
+    private void Start()
+    {
+        anim = GetComponent<Animation>();
+    }
 
     void Update()
     {
@@ -43,8 +48,9 @@ public class PlayerAttack : MonoBehaviour
 
 
         // Start an attack if permitted
-        if (Input.GetKeyDown(KeyCode.Mouse0) && cooldownTimer <= 0 && !attacking)
+        if (Input.GetKeyDown(KeyCode.E) && cooldownTimer <= 0 && !attacking)
         {
+           anim.Play("Swipe");
             StartAttack();
         }
 
@@ -55,6 +61,7 @@ public class PlayerAttack : MonoBehaviour
 
     void StartAttack()
     {
+       
         attackTimer = attackLength;
 
     }

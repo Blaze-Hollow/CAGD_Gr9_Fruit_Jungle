@@ -16,7 +16,7 @@ public class SmoothCamera : MonoBehaviour
     void Start()
     {
         Transform plr = GameObject.FindWithTag("Player").transform;
-        camTarget = plr.GetChild(0);
+        camTarget = plr.GetChild(2);
         lookAt = plr.GetChild(1);
     }
 
