@@ -90,7 +90,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeAttacked: 1
   damageCooldown: 1.5
-  maxEnemyHealthPoints: 100
+  maxEnemyHealthPoints: 50
 --- !u!1001 &985561167824681940
 PrefabInstance:
   m_ObjectHideFlags: 0

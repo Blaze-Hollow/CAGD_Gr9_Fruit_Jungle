@@ -1453,6 +1453,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4593576378005318222, guid: 593dbb95917362a4c9c288b841c26f42, type: 3}
+      propertyPath: maxEnemyHealthPoints
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 6250613159423104910, guid: 593dbb95917362a4c9c288b841c26f42, type: 3}
       propertyPath: m_Name
       value: WatermelonEnemyContainer
