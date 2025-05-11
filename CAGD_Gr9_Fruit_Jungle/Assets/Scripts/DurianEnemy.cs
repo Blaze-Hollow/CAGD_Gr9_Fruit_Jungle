@@ -1,26 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 
 /*
  * Author: Andrade, Maya
  * Created: 04/29/2025
- * Last Updated: 05/08/2025
+ * Last Updated: 05/11/2025
  * Description: This will handle the durian enemy movement and attack
  */
 
 public class DurianEnemy : MonoBehaviour
 {
-    [Header("Movement Variables")]
+    [Header("Patrol Movement Variables")]
+    public int speed = 7;
+    public Vector3 startingPoint;
+    public Vector3 direction;
+    public Transform leftBound;
+    public Transform rightBound;
+    public Vector3 leftStart;
+    public Vector3 rightStart;
+    public bool atTop;
+
+    [Header("Attacking Movement Variables")]
     public int speedDown = 10;
     public int speedUp = 7;
     public float midPoint_Y = 2; //middle point from top to bottom of model (for dropping down to floor)
-    public Vector3 startingPoint;
-    public Vector3 movePoint;
     public bool movingDown;
     public bool movingUp;
-    public bool atTop;
+    public Vector3 movePoint;
 
     [Header("Health Variables")]
     public int health = 10;
@@ -32,11 +41,16 @@ public class DurianEnemy : MonoBehaviour
     {
         startingPoint.y = transform.position.y;
         atTop = true;
+        direction = Vector3.right;
+        leftStart = leftBound.position;
+        rightStart = rightBound.position;
     }
 
     // Update is called once per frame
     void Update()
     {
+        EnemyMove();
+
         if (health == 0)
         {
             if (!hasExploded)
@@ -127,5 +141,28 @@ public class DurianEnemy : MonoBehaviour
     {
         movePoint = FindMovingPoint();
         movingDown = true;
+    }
+
+    /// <summary>
+    /// Move the durian left or right until it reaches the left/right bounds, then change directions
+    /// </summary>
+    private void EnemyMove()
+    {
+        if (atTop)
+        {
+            transform.position += direction * speed * Time.deltaTime;
+
+            //check if reached >= RightPoint
+            if (transform.position.x >= rightStart.x)
+            {
+                direction = Vector3.left;
+            }
+
+            //check if reached <= LeftPoint
+            if (transform.position.x <= leftStart.x)
+            {
+                direction = Vector3.right;
+            }
+        } 
     }
 }

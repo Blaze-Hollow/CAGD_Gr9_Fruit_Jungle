@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8029836289510300889}
   - component: {fileID: 8687457620896763095}
   - component: {fileID: 332932450905190290}
+  - component: {fileID: -6699208346788166590}
   m_Layer: 0
   m_Name: DurianEnemyContainer
   m_TagString: Untagged
@@ -35,6 +36,8 @@ Transform:
   - {fileID: 848014850863506009}
   - {fileID: 758091890285181246}
   - {fileID: 4261567850532604279}
+  - {fileID: 6575074901778039202}
+  - {fileID: 884722368187414133}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &8687457620896763095
@@ -72,16 +75,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96d57636a131b348a05fb231de620ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 7
+  startingPoint: {x: 0, y: 0, z: 0}
+  direction: {x: 0, y: 0, z: 0}
+  leftBound: {fileID: 6575074901778039202}
+  rightBound: {fileID: 884722368187414133}
+  leftStart: {x: 0, y: 0, z: 0}
+  rightStart: {x: 0, y: 0, z: 0}
+  atTop: 0
   speedDown: 10
   speedUp: 7
   midPoint_Y: 1.5
-  startingPoint: {x: 0, y: 0, z: 0}
-  movePoint: {x: 0, y: 0, z: 0}
   movingDown: 0
   movingUp: 0
-  atTop: 0
+  movePoint: {x: 0, y: 0, z: 0}
   health: 10
   DurianSplatter: {fileID: 3367078873186895261, guid: c5d971930deae404abfd9e7c8e8bd70d, type: 3}
+--- !u!114 &-6699208346788166590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254561920835767830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bef3fc8d8c473fe4d888ffadf133e1af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canBeAttacked: 1
+  damageCooldown: 1.5
+  maxEnemyHealthPoints: 100
 --- !u!1 &464808795439871422
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,6 +294,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   durian: {fileID: 332932450905190290}
   canCrush: 0
+--- !u!1 &5528889770387044334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6575074901778039202}
+  m_Layer: 0
+  m_Name: LeftPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6575074901778039202
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5528889770387044334}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8029836289510300889}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6140167383935234759
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,6 +444,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   durian: {fileID: 332932450905190290}
+--- !u!1 &7803856091120913700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 884722368187414133}
+  m_Layer: 0
+  m_Name: RightPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &884722368187414133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803856091120913700}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8029836289510300889}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7382898146111225923
 PrefabInstance:
   m_ObjectHideFlags: 0
