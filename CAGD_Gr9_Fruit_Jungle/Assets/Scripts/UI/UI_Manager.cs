@@ -26,7 +26,7 @@ public class UI_Manager : MonoBehaviour
     void Start()
     {
         SetBarMax();
-        fruitScore_Text.text = PlayerController.fruitScore.ToString();
+        
 
     }
 
@@ -34,7 +34,7 @@ public class UI_Manager : MonoBehaviour
     void Update()
     {
         SetBarPos();
-       
+        fruitScore_Text.text = PlayerController.fruitScore.ToString();
     }
 
     /// <summary>
