@@ -5,7 +5,7 @@ using UnityEngine;
 /*
  * Author: Andrade, Maya
  * Created: 05/06/2025
- * Last Updated: 05/06/2025
+ * Last Updated: 05/11/2025
  * Description: When an enemy dies, it drops an item with this script, which once collided with by the player, increases their score
  */
 
@@ -30,6 +30,7 @@ public class EnemyDrop : MonoBehaviour
         if (other.tag == "Player")
         {
             other.GetComponent<PlayerController>().fruitScore += fruitPoints;
+            Destroy(gameObject);
         }
     }
 

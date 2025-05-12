@@ -14,7 +14,7 @@ using UnityEngine;
 public class DurianEnemy : MonoBehaviour
 {
     [Header("Patrol Movement Variables")]
-    public int speed = 7;
+    public int speed = 15;
     public Vector3 startingPoint;
     public Vector3 direction;
     public Transform leftBound;
