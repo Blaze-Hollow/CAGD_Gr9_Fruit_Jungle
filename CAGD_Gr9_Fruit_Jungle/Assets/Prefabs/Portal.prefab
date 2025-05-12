@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 7931941267749713212}
   - component: {fileID: 5054644709543767066}
   - component: {fileID: 6602053078920964177}
+  - component: {fileID: 6812073028279933216}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -133,7 +134,7 @@ Transform:
   m_GameObject: {fileID: 1262557658157869039}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.70408046, w: 0.7101202}
-  m_LocalPosition: {x: -0.15, y: -0.74, z: 2.17}
+  m_LocalPosition: {x: -0.17582217, y: -0.6640899, z: 2.17}
   m_LocalScale: {x: 5.0464, y: 3.1598, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -210,6 +211,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6812073028279933216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262557658157869039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855b8e6a135fa2145823ed47f2ae744b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level: 2
 --- !u!1 &8087796693811415352
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +443,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6272312891599182793}
-  - component: {fileID: 5624116898414052658}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -456,16 +469,3 @@ Transform:
   - {fileID: 8380956523599755499}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5624116898414052658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8879060171530453340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855b8e6a135fa2145823ed47f2ae744b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Level: 0
