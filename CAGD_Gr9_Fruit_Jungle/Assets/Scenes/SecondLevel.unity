@@ -320,6 +320,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CocoPickUP (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8624759486925828591, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
+      propertyPath: dropDespawnTime
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -445,6 +449,10 @@ PrefabInstance:
     - target: {fileID: 5336126783834032669, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
       propertyPath: m_Name
       value: CocoPickUP (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8624759486925828591, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
+      propertyPath: dropDespawnTime
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -629,6 +637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CocoPickUP (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8624759486925828591, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
+      propertyPath: dropDespawnTime
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -691,6 +703,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CocoPickUP (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8624759486925828591, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
+      propertyPath: dropDespawnTime
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -748,6 +764,10 @@ PrefabInstance:
     - target: {fileID: 6272312891599182793, guid: 02f9e033aeee95840a366bccf53b1939, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812073028279933216, guid: 02f9e033aeee95840a366bccf53b1939, type: 3}
+      propertyPath: Level
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8879060171530453340, guid: 02f9e033aeee95840a366bccf53b1939, type: 3}
       propertyPath: m_Name
@@ -885,6 +905,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CocoPickUP (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8624759486925828591, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
+      propertyPath: dropDespawnTime
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -941,6 +965,10 @@ PrefabInstance:
     - target: {fileID: 5336126783834032669, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
       propertyPath: m_Name
       value: CocoPickUP (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8624759486925828591, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
+      propertyPath: dropDespawnTime
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1003,6 +1031,10 @@ PrefabInstance:
     - target: {fileID: 5336126783834032669, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
       propertyPath: m_Name
       value: CocoPickUP (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8624759486925828591, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
+      propertyPath: dropDespawnTime
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1218,6 +1250,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CocoPickUP (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8624759486925828591, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
+      propertyPath: dropDespawnTime
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1343,6 +1379,10 @@ PrefabInstance:
     - target: {fileID: 5336126783834032669, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
       propertyPath: m_Name
       value: CocoPickUP (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8624759486925828591, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
+      propertyPath: dropDespawnTime
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1885,6 +1925,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CocoPickUP (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8624759486925828591, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
+      propertyPath: dropDespawnTime
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2338,6 +2382,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CocoPickUP (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8624759486925828591, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
+      propertyPath: dropDespawnTime
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2394,6 +2442,10 @@ PrefabInstance:
     - target: {fileID: 5336126783834032669, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
       propertyPath: m_Name
       value: CocoPickUP (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8624759486925828591, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
+      propertyPath: dropDespawnTime
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2520,6 +2572,10 @@ PrefabInstance:
     - target: {fileID: 5336126783834032669, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
       propertyPath: m_Name
       value: CocoPickUP (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8624759486925828591, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
+      propertyPath: dropDespawnTime
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2657,6 +2713,10 @@ PrefabInstance:
     - target: {fileID: 5336126783834032669, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
       propertyPath: m_Name
       value: CocoPickUP (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8624759486925828591, guid: c80a38057c5cc89448023707ac2c473f, type: 3}
+      propertyPath: dropDespawnTime
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
