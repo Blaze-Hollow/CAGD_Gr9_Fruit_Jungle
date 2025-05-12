@@ -31,11 +31,6 @@ public class DurianEnemy : MonoBehaviour
     public bool movingUp;
     public Vector3 movePoint;
 
-    [Header("Health Variables")]
-    public int health = 10;
-    private bool hasExploded = false;
-    public GameObject DurianSplatter;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -50,17 +45,6 @@ public class DurianEnemy : MonoBehaviour
     void Update()
     {
         EnemyMove();
-
-        if (health == 0)
-        {
-            if (!hasExploded)
-            {
-            Instantiate(DurianSplatter, transform.position, transform.rotation);
-            hasExploded = true;
-            }
-
-            Destroy(gameObject);
-        }
 
         if (movingDown)
         {

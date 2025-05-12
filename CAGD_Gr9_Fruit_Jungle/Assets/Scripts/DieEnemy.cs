@@ -2,28 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Author: Samu, Omar
+ * Created: 05/09/2025
+ * Last Updated: 05/11/2025
+ * Description: Allows enemy to be damaged and drop something on death
+ */
+
 public class DieEnemy : MonoBehaviour, IDamageable
 {
     [SerializeField] bool canBeAttacked = true;
     [SerializeField] private float damageCooldown = 1.5f;
 
+
     [Header("Enemy Health Variables")]
     public int maxEnemyHealthPoints = 100;
+    public GameObject drop;
+    public bool dropped;
 
     private float lastHitTime = 0;
 
-
-
-    void Update()
+    public void Start()
     {
-
-
-
+        dropped = false;
     }
-
-
-
-
     public void OnAttack(PlayerController player)
     {
 
@@ -44,6 +46,11 @@ public class DieEnemy : MonoBehaviour, IDamageable
 
         void Die()
         {
+            if (dropped == false)
+            {
+                Instantiate(drop, transform.position, Quaternion.identity);
+                dropped = true;
+            }
             Destroy(gameObject);
         }
 

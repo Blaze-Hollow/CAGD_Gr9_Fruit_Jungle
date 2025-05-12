@@ -89,8 +89,6 @@ MonoBehaviour:
   movingDown: 0
   movingUp: 0
   movePoint: {x: 0, y: 0, z: 0}
-  health: 10
-  DurianSplatter: {fileID: 3367078873186895261, guid: c5d971930deae404abfd9e7c8e8bd70d, type: 3}
 --- !u!114 &-6699208346788166590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,6 +103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeAttacked: 1
   damageCooldown: 1.5
+  drop: {fileID: 3367078873186895261, guid: c5d971930deae404abfd9e7c8e8bd70d, type: 3}
+  dropped: 0
   maxEnemyHealthPoints: 10
 --- !u!1 &464808795439871422
 GameObject:

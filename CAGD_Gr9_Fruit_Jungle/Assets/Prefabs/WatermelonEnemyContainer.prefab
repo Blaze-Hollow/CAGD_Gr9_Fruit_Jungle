@@ -49,9 +49,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   seed: {fileID: 7829400606264116274, guid: 07f8898a191f6794b89d382904906ba1, type: 3}
-  watermelonDrop: {fileID: 1699939089343408613, guid: a5aceaa74fbe35e43ac3d01fb78dea50, type: 3}
-  dropped: 0
-  health: 20
   seedShootingRate: 3
 --- !u!136 &3272906990163990604
 CapsuleCollider:
@@ -90,6 +87,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeAttacked: 1
   damageCooldown: 1.5
+  drop: {fileID: 1699939089343408613, guid: a5aceaa74fbe35e43ac3d01fb78dea50, type: 3}
+  dropped: 0
   maxEnemyHealthPoints: 50
 --- !u!1001 &985561167824681940
 PrefabInstance:
