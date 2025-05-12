@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Combat Variables")]
     public int attackStrength = 10;
-    public int fruitScore = 0;
+    public static int fruitScore = 0;
     public float killHeight = -10;
 
 
