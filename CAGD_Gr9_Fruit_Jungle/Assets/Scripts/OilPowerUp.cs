@@ -1,3 +1,7 @@
+/* Author [Diaz,Samuel]
+ * Last Updated [04/24/2025]
+ * Description [This script is in charge of increasing the players speed for certain areas of the game]
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

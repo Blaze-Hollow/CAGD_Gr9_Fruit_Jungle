@@ -1,3 +1,7 @@
+/* Author [Diaz,Samuel]
+ * Last Updated [04/24/2025]
+ * Description [This script is in charge of decrease the players speed after reaching certain area]
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
