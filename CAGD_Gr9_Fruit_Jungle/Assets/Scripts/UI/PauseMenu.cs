@@ -41,9 +41,9 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     public void Resume()
     {
-        pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         gameIsPaused = false;
+        pauseMenuUI.SetActive(false);
     }
 
     /// <summary>
@@ -51,9 +51,9 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     public void Pause()
     {
-        pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;
+        pauseMenuUI.SetActive(true);
     }
 
     /// <summary>
