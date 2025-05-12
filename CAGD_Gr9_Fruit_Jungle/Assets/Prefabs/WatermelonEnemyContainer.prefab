@@ -69,7 +69,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.85508394
+  m_Radius: 1.64
   m_Height: 2.6719599
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -87,9 +87,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeAttacked: 1
   damageCooldown: 1.5
+  maxEnemyHealthPoints: 50
   drop: {fileID: 1699939089343408613, guid: a5aceaa74fbe35e43ac3d01fb78dea50, type: 3}
   dropped: 0
-  maxEnemyHealthPoints: 50
 --- !u!1001 &985561167824681940
 PrefabInstance:
   m_ObjectHideFlags: 0
