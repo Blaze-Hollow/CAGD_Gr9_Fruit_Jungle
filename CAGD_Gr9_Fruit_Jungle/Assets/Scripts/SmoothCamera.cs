@@ -27,6 +27,22 @@ public class SmoothCamera : MonoBehaviour
     void UpdateCam()
     {
         Vector3 targetPos = new Vector3(0, camTarget.position.y, camTarget.position.z);
+
+        RaycastHit hit;
+        Vector3 direction = targetPos - camTarget.position; // Direction from player to camera
+        float maxDistance = direction.magnitude; // Max allowable distance
+
+        if (Physics.Raycast(camTarget.position, direction.normalized, out hit, maxDistance))
+        {
+            // If an obstacle is detected, set the camera position to the hit point
+            transform.position = hit.point;
+        }
+        else
+        {
+            // No obstacle detected, move camera normally
+            transform.position = Vector3.Lerp(transform.position, targetPos, moveLerpSpeed * Time.fixedDeltaTime);
+        }
+
         transform.position = Vector3.Lerp(transform.position, targetPos, moveLerpSpeed * Time.fixedDeltaTime);
         transform.rotation = Quaternion.Slerp(
             transform.rotation,
