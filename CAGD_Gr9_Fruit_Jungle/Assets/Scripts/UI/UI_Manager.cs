@@ -42,10 +42,10 @@ public class UI_Manager : MonoBehaviour
     /// </summary>
     private void SetBarMax()
     {
-        slider.maxValue = playerScript.maxHealthPoints; //sets slider's maximum value
-        slider.value = playerScript.maxHealthPoints; //sets the slider's value at full HP at start
+        slider.maxValue = PlayerController.maxHealthPoints; //sets slider's maximum value
+        slider.value = PlayerController.maxHealthPoints; //sets the slider's value at full HP at start
         fill.color = gradient.Evaluate(1f); //sets the color to green
-        healthPoints_Text.text = playerScript.healthPoints + ""; //sets the HP text on the side to the player's HP value at start
+        healthPoints_Text.text = PlayerController.healthPoints + ""; //sets the HP text on the side to the player's HP value at start
     }
 
     /// <summary>
@@ -53,9 +53,9 @@ public class UI_Manager : MonoBehaviour
     /// </summary>
     private void SetBarPos()
     {
-        slider.value = playerScript.healthPoints; //keeps the slider's vaue synced with player's HP value
+        slider.value = PlayerController.healthPoints; //keeps the slider's vaue synced with player's HP value
         fill.color = gradient.Evaluate(slider.normalizedValue); //changes the color of the health bar fill as it lowers
-        healthPoints_Text.text = playerScript.healthPoints + ""; //keeps the HP number displayed synced with the player's HP value
+        healthPoints_Text.text = PlayerController.healthPoints + ""; //keeps the HP number displayed synced with the player's HP value
     }
 
 }

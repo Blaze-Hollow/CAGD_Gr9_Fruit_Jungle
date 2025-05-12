@@ -24,9 +24,9 @@ public class HealthScript : MonoBehaviour
     {
         if(other.GetComponent<PlayerController>())
         {
-            int newHealth = giveHealth + other.GetComponent<PlayerController>().healthPoints;
-            other.GetComponent<PlayerController>().healthPoints = Mathf.Clamp(newHealth, 0, other.GetComponent<PlayerController>
-                ().maxHealthPoints);
+            int newHealth = giveHealth + PlayerController.healthPoints;
+            PlayerController.healthPoints = Mathf.Clamp(newHealth, 0, 
+                PlayerController.maxHealthPoints);
 
             Destroy(gameObject);
         }

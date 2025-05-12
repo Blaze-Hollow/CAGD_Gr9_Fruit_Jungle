@@ -27,7 +27,7 @@ public class SmushedDurian : MonoBehaviour
     {
         if (other.GetComponent<PlayerController>() && canDamage)
         {
-            other.GetComponent<PlayerController>().healthPoints -= 10;
+            PlayerController.healthPoints -= 10;
             canDamage = false;
             StartCoroutine(DamageCooldown());
         }

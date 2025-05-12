@@ -15,7 +15,7 @@ public class DurianSides : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<PlayerController>().healthPoints -= 15;
+            PlayerController.healthPoints -= 15;
         }
     }
 }

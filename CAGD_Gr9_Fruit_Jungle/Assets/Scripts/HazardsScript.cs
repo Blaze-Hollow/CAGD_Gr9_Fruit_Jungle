@@ -26,7 +26,7 @@ public class HazardsScript : MonoBehaviour
         print(other);
         if (other.GetComponent<PlayerController>())
         {
-            other.GetComponent<PlayerController>().healthPoints = other.GetComponent<PlayerController>().healthPoints - DamageDealt;
+            PlayerController.healthPoints = PlayerController.healthPoints - DamageDealt;
         }
        
     }

@@ -47,7 +47,7 @@ public class SeedProjectile : MonoBehaviour
         }
         else if (other.tag == "Player") 
         {
-            other.GetComponent<PlayerController>().healthPoints -= seedDamage;
+            PlayerController.healthPoints -= seedDamage;
             Destroy(gameObject);
         }
         else

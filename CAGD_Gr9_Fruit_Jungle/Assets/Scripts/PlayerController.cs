@@ -21,8 +21,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
 
     [Header("Health Variables")]
-    public int maxHealthPoints = 100;
-    public int healthPoints;
+    public static int maxHealthPoints = 100;
+    public static int healthPoints;
 
     [Header("Combat Variables")]
     public int attackStrength = 10;

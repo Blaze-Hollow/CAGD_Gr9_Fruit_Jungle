@@ -35,7 +35,7 @@ public class DurianCrusher : MonoBehaviour
     {
         if (canCrush && other.tag == "Player")
         {
-            other.GetComponent<PlayerController>().healthPoints = 0;
+            PlayerController.healthPoints = 0;
         }
     }
 }
