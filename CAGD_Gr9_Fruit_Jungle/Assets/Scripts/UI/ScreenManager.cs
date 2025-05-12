@@ -40,6 +40,7 @@ public class ScreenManager : MonoBehaviour
     public void PlayButtonPressed()
     {
         Time.timeScale = 1f;
+        PlayerController.fruitScore = 0; // Reset fruit score
         SceneManager.LoadScene(1);
     }
 

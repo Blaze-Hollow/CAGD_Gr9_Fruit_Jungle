@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -29,15 +30,30 @@ public class PlayerController : MonoBehaviour
     public static int fruitScore = 0;
     public float killHeight = -10;
 
+    private static PlayerController instance;
+
+
+    
+ 
 
     // Start is called before the first frame update
     void Start()
     {
+
+        
         healthPoints = maxHealthPoints;
+
+         
+
         rb = GetComponent<Rigidbody>();
 
         anim = GetComponent<Animation>();
         anim.Play("Idle");
+
+
+     
+
+
     }
 
     private void FixedUpdate()
@@ -85,6 +101,10 @@ public class PlayerController : MonoBehaviour
 
         }
     }
+
+   
+    
+
 
     private void Move()
     {
@@ -139,7 +159,7 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetKeyUp(KeyCode.Space) && OnGround())
+        if (Input.GetKeyDown(KeyCode.Space) && OnGround())
         {
             anim.Play("Jump");
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);

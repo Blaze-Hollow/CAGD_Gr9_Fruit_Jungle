@@ -337,11 +337,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 7
-  maxHealthPoints: 100
-  healthPoints: 0
   attackStrength: 10
-  fruitScore: 0
   killHeight: -10
+  gameManager: {fileID: 0}
 --- !u!65 &475010198418242728
 BoxCollider:
   m_ObjectHideFlags: 0
