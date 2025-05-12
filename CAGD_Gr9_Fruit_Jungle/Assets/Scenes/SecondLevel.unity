@@ -765,6 +765,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6812073028279933216, guid: 02f9e033aeee95840a366bccf53b1939, type: 3}
+      propertyPath: Level
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8879060171530453340, guid: 02f9e033aeee95840a366bccf53b1939, type: 3}
       propertyPath: m_Name
       value: Portal
