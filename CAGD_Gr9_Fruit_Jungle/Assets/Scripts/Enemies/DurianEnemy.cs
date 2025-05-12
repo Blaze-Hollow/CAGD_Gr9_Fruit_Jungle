@@ -137,6 +137,9 @@ public class DurianEnemy : MonoBehaviour
         movingUp = true;
     }
 
+    /// <summary>
+    /// This function is called if the detector collider detects the player underneath the durian
+    /// </summary>
     public void PlayerDetected()
     {
         movePoint = FindMovingPoint();
