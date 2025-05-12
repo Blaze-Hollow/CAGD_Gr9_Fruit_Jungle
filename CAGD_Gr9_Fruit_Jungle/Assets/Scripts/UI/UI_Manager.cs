@@ -26,13 +26,15 @@ public class UI_Manager : MonoBehaviour
     void Start()
     {
         SetBarMax();
+        fruitScore_Text.text = PlayerController.fruitScore.ToString();
+
     }
 
     // Update is called once per frame
     void Update()
     {
         SetBarPos();
-        fruitScore_Text.text = playerScript.fruitScore + "";
+       
     }
 
     /// <summary>
@@ -57,3 +59,4 @@ public class UI_Manager : MonoBehaviour
     }
 
 }
+/*  fruitScore_Text.text = playerScript.fruitScore + "" */;

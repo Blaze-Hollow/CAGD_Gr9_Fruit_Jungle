@@ -29,7 +29,7 @@ public class EnemyDrop : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<PlayerController>().fruitScore += fruitPoints;
+            PlayerController.fruitScore += fruitPoints;
             Destroy(gameObject);
         }
     }

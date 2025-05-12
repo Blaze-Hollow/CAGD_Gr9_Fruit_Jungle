@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3272906990163990604, guid: 593dbb95917362a4c9c288b841c26f42, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6250613159423104910, guid: 593dbb95917362a4c9c288b841c26f42, type: 3}
       propertyPath: m_Name
@@ -187,6 +187,63 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1233232604}
   m_SourcePrefab: {fileID: 100100000, guid: 593dbb95917362a4c9c288b841c26f42, type: 3}
+--- !u!1001 &197834733
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1744660297374968606, guid: 33df8e90738b6d649a93720d1e2f29cb, type: 3}
+      propertyPath: m_Name
+      value: ApplePickUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6606906724553082557, guid: 33df8e90738b6d649a93720d1e2f29cb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.4176564
+      objectReference: {fileID: 0}
+    - target: {fileID: 6606906724553082557, guid: 33df8e90738b6d649a93720d1e2f29cb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.8989239
+      objectReference: {fileID: 0}
+    - target: {fileID: 6606906724553082557, guid: 33df8e90738b6d649a93720d1e2f29cb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.011457
+      objectReference: {fileID: 0}
+    - target: {fileID: 6606906724553082557, guid: 33df8e90738b6d649a93720d1e2f29cb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6606906724553082557, guid: 33df8e90738b6d649a93720d1e2f29cb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6606906724553082557, guid: 33df8e90738b6d649a93720d1e2f29cb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6606906724553082557, guid: 33df8e90738b6d649a93720d1e2f29cb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6606906724553082557, guid: 33df8e90738b6d649a93720d1e2f29cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6606906724553082557, guid: 33df8e90738b6d649a93720d1e2f29cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6606906724553082557, guid: 33df8e90738b6d649a93720d1e2f29cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 33df8e90738b6d649a93720d1e2f29cb, type: 3}
 --- !u!1 &240505503
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +384,8 @@ MonoBehaviour:
   canBeAttacked: 1
   damageCooldown: 1.5
   maxEnemyHealthPoints: 100
+  drop: {fileID: 0}
+  dropped: 0
 --- !u!65 &452026300
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -527,6 +586,65 @@ MonoBehaviour:
   canBeAttacked: 1
   damageCooldown: 0.5
   maxEnemyHealthPoints: 45
+  drop: {fileID: 0}
+  dropped: 0
+--- !u!1001 &1524050031670594557
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 585890515895819083, guid: c782953be4dbe38489a1d53c9d2016e3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.6437726
+      objectReference: {fileID: 0}
+    - target: {fileID: 585890515895819083, guid: c782953be4dbe38489a1d53c9d2016e3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 585890515895819083, guid: c782953be4dbe38489a1d53c9d2016e3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 585890515895819083, guid: c782953be4dbe38489a1d53c9d2016e3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 585890515895819083, guid: c782953be4dbe38489a1d53c9d2016e3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 585890515895819083, guid: c782953be4dbe38489a1d53c9d2016e3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 585890515895819083, guid: c782953be4dbe38489a1d53c9d2016e3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 585890515895819083, guid: c782953be4dbe38489a1d53c9d2016e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 585890515895819083, guid: c782953be4dbe38489a1d53c9d2016e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 585890515895819083, guid: c782953be4dbe38489a1d53c9d2016e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 645161477904094192, guid: c782953be4dbe38489a1d53c9d2016e3, type: 3}
+      propertyPath: m_Name
+      value: PlatformKill
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c782953be4dbe38489a1d53c9d2016e3, type: 3}
 --- !u!1001 &2619061418132789860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -663,3 +781,5 @@ SceneRoots:
   - {fileID: 3520329724266647268}
   - {fileID: 452026303}
   - {fileID: 125938776}
+  - {fileID: 1524050031670594557}
+  - {fileID: 197834733}
