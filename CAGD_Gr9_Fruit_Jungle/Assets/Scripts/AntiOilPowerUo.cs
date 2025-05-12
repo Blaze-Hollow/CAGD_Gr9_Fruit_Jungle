@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OilPowerUp : MonoBehaviour
+public class AntiOilPowerUo : MonoBehaviour
 {
-    public int speedBoost = 3;
+    public int antiSpeedBoost = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,12 +16,12 @@ public class OilPowerUp : MonoBehaviour
     {
         
     }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<PlayerController>())
+        if(other.GetComponent<PlayerController>())
         {
-            other.GetComponent<PlayerController>().speed += speedBoost;
-            Destroy(gameObject);
+            other.GetComponent<PlayerController>().speed -= antiSpeedBoost;
         }
     }
 }
