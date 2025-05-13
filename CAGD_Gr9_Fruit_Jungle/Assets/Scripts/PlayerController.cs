@@ -8,12 +8,11 @@ using UnityEngine.SceneManagement;
  * Name: Omar Samu 
  * Date: 04/06/25
  * Last Updated: 05/01/25
- * Description: Allows player movement
+ * Description: Allows player movement with raycast collision prevention
  */
 public class PlayerController : MonoBehaviour
 {
-
-    Animation anim; 
+    Animation anim;
 
     [Header("Movement Variables")]
     public int speed = 10;
@@ -32,37 +31,22 @@ public class PlayerController : MonoBehaviour
 
     private static PlayerController instance;
 
-
-    
- 
-
     // Start is called before the first frame update
     void Start()
     {
-
-        
         healthPoints = maxHealthPoints;
-
-         
-
         rb = GetComponent<Rigidbody>();
-
         anim = GetComponent<Animation>();
         anim.Play("Idle");
-
-
-     
-
-
     }
 
     private void FixedUpdate()
     {
         if (!PauseMenu.gameIsPaused)
         {
+            // Call movement from FixedUpdate for consistent physics updates.
             Move();
         }
-        
     }
 
     // Update is called once per frame
@@ -75,86 +59,104 @@ public class PlayerController : MonoBehaviour
 
         if (!PauseMenu.gameIsPaused)
         {
-
-            //TEMPORARY- REMOVE BEFORE SUMBITTING
+            // TEMPORARY - REMOVE BEFORE SUBMITTING
             if (Input.GetKeyDown(KeyCode.P))
             {
                 healthPoints -= 10;
             }
 
-
-            if (healthPoints <= 0) //checks to see if player has "died" yet or not
+            if (healthPoints <= 0)
             {
                 SceneManager.LoadScene(4);
-                print("GAME OVER =[");
+                Debug.Log("GAME OVER =[");
             }
 
             Jump();
-            Move(); 
-
+            //  If you want movement updates every frame, you may call Move() here too.
             if (anim.isPlaying == false)
             {
                 anim.Play("Idle");
             }
-
-           
-
         }
     }
 
-   
-    
-
-
     private void Move()
     {
+        // Right movement
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            anim.Play("Jog");
-            //Move right
-            rb.MovePosition(transform.position += (Vector3.right * speed * Time.deltaTime));
+            if (CanMove(Vector3.right))
+            {
+                anim.Play("Jog");
+                rb.MovePosition(transform.position + (Vector3.right * speed * Time.deltaTime));
+            }
+            else
+            {
+                anim.Play("Idle");
+            }
         }
-        if (Input.GetKeyUp(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            anim.Play("Idle");
 
-        }
-
+        // Left movement
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            anim.Play("Jog");
-            //Move right
-            transform.position += Vector3.left * speed * Time.deltaTime;
+            if (CanMove(Vector3.left))
+            {
+                anim.Play("Jog");
+                transform.position += Vector3.left * speed * Time.deltaTime;
+            }
+            else
+            {
+                anim.Play("Idle");
+            }
         }
-        if (Input.GetKeyUp(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            anim.Play("Idle");
 
-        }
+        // Backward movement
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            anim.Play("Jog");
-            //Move right
-            transform.position += Vector3.back * speed * Time.deltaTime;
+            if (CanMove(Vector3.back))
+            {
+                anim.Play("Jog");
+                transform.position += Vector3.back * speed * Time.deltaTime;
+            }
+            else
+            {
+                anim.Play("Idle");
+            }
         }
-        if (Input.GetKeyUp(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-        {
-            anim.Play("Idle");
 
-        }
+        // Forward movement
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
-            anim.Play("Jog");
-            //Move right
-            transform.position += Vector3.forward * speed * Time.deltaTime;
+            if (CanMove(Vector3.forward))
+            {
+                anim.Play("Jog");
+                transform.position += Vector3.forward * speed * Time.deltaTime;
+            }
+            else
+            {
+                anim.Play("Idle");
+            }
         }
-        if (Input.GetKeyUp(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+    }
+
+    // Casts a ray in the intended direction to see if a wall is blocking
+    private bool CanMove(Vector3 direction)
+    {
+        // Calculate the distance for the raycast based on the current movement step
+        float movementStep = speed * Time.deltaTime;
+        float rayDistance = movementStep + 0.2f; // Adding a small buffer
+
+        RaycastHit hit;
+        // Cast the ray from the player's position in the specified direction.
+        if (Physics.Raycast(transform.position, direction, out hit, rayDistance))
         {
-            anim.Play("Idle");
-
+            // Check if the hit object has your wall script/component.
+            if (hit.collider.GetComponent<Wall>() != null)
+            {
+                return false;
+            }
         }
-
-        
+        return true;
     }
 
     private void Jump()
@@ -164,34 +166,22 @@ public class PlayerController : MonoBehaviour
             anim.Play("Jump");
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
-       
     }
 
-
+    // Checks if the player is on the ground by the y axis :)
     private bool OnGround()
     {
-        bool onGround = false;
-
        
-        Rigidbody rb = GetComponent<Rigidbody>();
-
-        // Check if the player's velocity along the Y-axis is approximately zero
+        // Check if the player's vertical velocity is nearly zero.
         if (Mathf.Abs(rb.velocity.y) < 0.1f)
         {
-            onGround = true;
+            return true;
         }
-
-        return onGround;
+        return false;
     }
-
-
 
     public void Bounce()
     {
         rb.velocity = new Vector3(rb.velocity.x, jumpForce * 0.666f, rb.velocity.z);
     }
-
 }
-
-
-
