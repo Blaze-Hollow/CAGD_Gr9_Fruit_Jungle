@@ -207,6 +207,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 693bdb21eaef516439647e7db86f272c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &176131220 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3608829537983029072, guid: a3a521985d51bec4583428816d747f76, type: 3}
+  m_PrefabInstance: {fileID: 176131218}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &180075208
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finalScore: {fileID: 1681253092}
+  playerCanvas: {fileID: 176131220}
   playerScript: {fileID: 176131219}
 --- !u!1 &389616760
 GameObject:
