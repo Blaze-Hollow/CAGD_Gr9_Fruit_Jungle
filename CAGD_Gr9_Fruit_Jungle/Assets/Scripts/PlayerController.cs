@@ -88,7 +88,8 @@ public class PlayerController : MonoBehaviour
             if (CanMove(Vector3.right))
             {
                 anim.Play("Jog");
-                rb.MovePosition(transform.position + (Vector3.right * speed * Time.deltaTime));
+                //rb.MovePosition(transform.position + (Vector3.right * speed * Time.deltaTime));
+                transform.position += Vector3.right * speed * Time.deltaTime;
             }
             else
             {
@@ -140,7 +141,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Casts a ray in the intended direction to see if a wall is blocking
-    private bool CanMove(Vector3 direction)
+    private bool CanMove(Vector3 direction) 
     {
         // Calculate the distance for the raycast based on the current movement step
         float movementStep = speed * Time.deltaTime;
@@ -148,7 +149,7 @@ public class PlayerController : MonoBehaviour
 
         RaycastHit hit;
         // Cast the ray from the player's position in the specified direction.
-        if (Physics.Raycast(transform.position, direction, out hit, rayDistance))
+        if (Physics.Raycast(transform.position, direction, out hit, 0.5f))
         {
             // Check if the hit object has your wall script/component.
             if (hit.collider.GetComponent<Wall>() != null)
