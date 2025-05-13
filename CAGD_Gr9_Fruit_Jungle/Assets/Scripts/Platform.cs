@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.UIElements.UxmlAttributeDescription;
 
+/*
+ * Author: Samu, Omar
+ * Created: 05/13/2025
+ * Last Updated: 05/13/2025
+ * Description: Makes the platforms disappear periodically
+ */
 
 public class FloatingPlatform : MonoBehaviour
 {

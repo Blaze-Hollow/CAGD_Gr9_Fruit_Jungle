@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Author: Samu, Omar
+ * Created: 05/13/2025
+ * Last Updated: 05/13/2025
+ * Description: Makes the platforms disappear periodically
+ */
+
 public class PlatformKill : MonoBehaviour
 {
     public float deactivateTime = 3f; // Time before the platform turns off (modifiable in Inspector)

@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Author: Samu, Omar
+ * Created: 05/13/2025
+ * Last Updated: 05/13/2025
+ * Description: Allows player to attack enemies
+ */
+
 public class PlayerAttack : MonoBehaviour
 {
     Animation anim;
