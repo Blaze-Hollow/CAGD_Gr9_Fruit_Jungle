@@ -22,7 +22,7 @@ public class AntiOilPowerUo : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
-    {
+    {//it gets the player speed back to normal
         if(other.GetComponent<PlayerController>())
         {
             other.GetComponent<PlayerController>().speed -= antiSpeedBoost;

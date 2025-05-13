@@ -21,7 +21,7 @@ public class HealthScript : MonoBehaviour
         
     }
     private void OnTriggerEnter(Collider other)
-    {
+    {//it gives back the player some health without getting over the max and destroys the pick up
         if(other.GetComponent<PlayerController>())
         {
             int newHealth = giveHealth + PlayerController.healthPoints;

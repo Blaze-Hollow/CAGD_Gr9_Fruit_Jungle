@@ -22,7 +22,7 @@ public class HazardsScript : MonoBehaviour
         
     }
     private void OnTriggerEnter(Collider other)
-    {
+    {//it's in charge of dealing the player certain amount of damage when interacting with it
         print(other);
         if (other.GetComponent<PlayerController>())
         {

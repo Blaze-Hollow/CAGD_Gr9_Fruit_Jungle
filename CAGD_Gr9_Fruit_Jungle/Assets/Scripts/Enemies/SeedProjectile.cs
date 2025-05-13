@@ -54,5 +54,5 @@ public class SeedProjectile : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    } 
+    }
 }
