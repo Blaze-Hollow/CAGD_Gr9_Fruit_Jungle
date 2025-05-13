@@ -50,6 +50,10 @@ public class SeedProjectile : MonoBehaviour
             PlayerController.healthPoints -= seedDamage;
             Destroy(gameObject);
         }
+        else if (other.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
         else
         {
             Destroy(gameObject);
