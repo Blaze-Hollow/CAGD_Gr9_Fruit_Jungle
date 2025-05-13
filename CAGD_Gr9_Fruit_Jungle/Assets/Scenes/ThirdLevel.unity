@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small Grass  Variant (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8729232015456043277, guid: 8b2a42888cbc9204ea7ff65f42db3978, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -236,6 +240,10 @@ PrefabInstance:
     - target: {fileID: 645161477904094192, guid: c782953be4dbe38489a1d53c9d2016e3, type: 3}
       propertyPath: m_Name
       value: PlatformKill (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 645161477904094192, guid: c782953be4dbe38489a1d53c9d2016e3, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1041,6 +1049,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformKill (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 645161477904094192, guid: c782953be4dbe38489a1d53c9d2016e3, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1061,7 +1073,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &442996722
 Transform:
   m_ObjectHideFlags: 0
@@ -1139,6 +1151,10 @@ PrefabInstance:
     - target: {fileID: 8729232015456043277, guid: 8b2a42888cbc9204ea7ff65f42db3978, type: 3}
       propertyPath: m_Name
       value: Small Grass  Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8729232015456043277, guid: 8b2a42888cbc9204ea7ff65f42db3978, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1715,6 +1731,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small Grass  Variant (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8729232015456043277, guid: 8b2a42888cbc9204ea7ff65f42db3978, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1974,6 +1994,10 @@ PrefabInstance:
     - target: {fileID: 8729232015456043277, guid: 8b2a42888cbc9204ea7ff65f42db3978, type: 3}
       propertyPath: m_Name
       value: Small Grass  Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8729232015456043277, guid: 8b2a42888cbc9204ea7ff65f42db3978, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2338,6 +2362,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small Grass  Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8729232015456043277, guid: 8b2a42888cbc9204ea7ff65f42db3978, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2547,6 +2575,10 @@ PrefabInstance:
     - target: {fileID: 645161477904094192, guid: c782953be4dbe38489a1d53c9d2016e3, type: 3}
       propertyPath: m_Name
       value: PlatformKill
+      objectReference: {fileID: 0}
+    - target: {fileID: 645161477904094192, guid: c782953be4dbe38489a1d53c9d2016e3, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2853,6 +2885,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformKill (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 645161477904094192, guid: c782953be4dbe38489a1d53c9d2016e3, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2915,6 +2951,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small Grass  Variant (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8729232015456043277, guid: 8b2a42888cbc9204ea7ff65f42db3978, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2970,7 +3010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4880077029596247847, guid: ab50967be9ab33a4a84578cfbd9c5972, type: 3}
       propertyPath: m_Name
-      value: Cube (1)
+      value: Tower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
