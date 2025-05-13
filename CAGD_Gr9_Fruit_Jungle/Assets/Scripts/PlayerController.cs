@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /*
- * Name: Omar Samu and Maya Andrade
+ * Name: Omar Samu 
  * Date: 04/06/25
  * Last Updated: 05/01/25
  * Description: Allows player movement
