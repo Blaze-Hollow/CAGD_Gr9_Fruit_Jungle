@@ -15,6 +15,7 @@ public class FinalScore : MonoBehaviour
 {
 
     public TMP_Text finalScore;
+    public GameObject playerCanvas;
     public PlayerController playerScript;
 
 
@@ -22,5 +23,6 @@ public class FinalScore : MonoBehaviour
     void Start()
     {
         finalScore.text = "Final Score: " + PlayerController.fruitScore.ToString();
+        playerCanvas.SetActive(false);
     }
 }
