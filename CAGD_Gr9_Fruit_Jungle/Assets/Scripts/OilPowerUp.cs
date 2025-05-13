@@ -21,7 +21,7 @@ public class OilPowerUp : MonoBehaviour
         
     }
     private void OnTriggerEnter(Collider other)
-    {
+    {//it increases the player speed when interact with it and destroys the pick up
         if (other.GetComponent<PlayerController>())
         {
             other.GetComponent<PlayerController>().speed += speedBoost;

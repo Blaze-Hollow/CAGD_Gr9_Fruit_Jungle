@@ -21,7 +21,8 @@ public class StrenghtPowerUp : MonoBehaviour
         
     }
     private void OnTriggerEnter(Collider other)
-    {
+    {//this changes the player strenght once they interact with it and destroys the pick up
+     // it wasn't use
         if (other.GetComponent<PlayerController>())
         {
             other.GetComponent<PlayerController>().attackStrength += strenghtBoost;

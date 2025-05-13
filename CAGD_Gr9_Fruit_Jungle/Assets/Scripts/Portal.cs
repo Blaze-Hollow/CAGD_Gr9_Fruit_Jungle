@@ -29,7 +29,7 @@ public class Portal : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
-    {
+    {//it changes the scene once the player goes through it
         if (other.GetComponent<PlayerController>())
         {
             
